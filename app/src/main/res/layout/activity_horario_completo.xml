@@ -1,41 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.br.ucsal.lamis.HorarioCompleto"
-    android:orientation="Vertical">
+    android:orientation="vertical">
+
+    <TextView
+        android:padding="15pt"
+        android:id="@+id/titulo"
+        android:textSize="15pt"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/branco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_horizontal">
+        android:gravity="center">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="anterior"
-            android:onClick="voltar"/>
+            android:text="Anterior"
+            android:onClick="anterior"/>
 
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="PROXIMO"
+            android:text="Proximo"
             android:onClick="proximo"/>
 
     </LinearLayout>
 
-    <LinearLayout
+    <TextView
+        android:padding="10pt"
+        android:id="@+id/H1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:text="7:00 - 8:15"
+        android:textColor="@color/branco"
+        android:gravity="center_horizontal"/>
 
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></ListView>
+    <TextView
+        android:padding="10pt"
+        android:id="@+id/H2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="8:15 - 9:40"
+        android:textColor="@color/branco"
+        android:gravity="center_horizontal"/>
 
-    </LinearLayout>
+    <TextView
+        android:padding="10pt"
+        android:id="@+id/H3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="9:40 - 10:40"
+        android:textColor="@color/branco"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:padding="10pt"
+        android:id="@+id/H4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="10:40 - 12:30"
+        android:textColor="@color/branco"
+        android:gravity="center_horizontal"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5pt" />
+
+    <TextView
+        android:padding="10pt"
+        android:id="@+id/H5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textColor="@color/branco"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:padding="10pt"
+        android:id="@+id/H6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textColor="@color/branco"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:padding="10pt"
+        android:id="@+id/H7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textColor="@color/branco"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:padding="10pt"
+        android:id="@+id/H8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textColor="@color/branco"
+        android:gravity="center_horizontal"/>
 
 </LinearLayout>
+</ScrollView>

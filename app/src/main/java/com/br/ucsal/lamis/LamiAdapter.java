@@ -1,8 +1,6 @@
 package com.br.ucsal.lamis;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.icu.text.IDNA;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
@@ -11,10 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.br.ucsal.lamis.model.Lami;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.br.ucsal.lamis.R.color.vermelho;
 
 /**
  * Created by alan on 15/06/17.
@@ -48,7 +46,7 @@ public class LamiAdapter extends ArrayAdapter<Lami> {
         nome.setText(lami.toString());
         nome.setTextColor(context.getResources().getColor(R.color.branco));
 
-        if(lami.getHorario()[aula][periodo] == 0 ) {
+        if(lami.getSituacaoAtual() == 0 ) {
             itemLami.setBackgroundColor(context.getResources().getColor(R.color.verde));
             info.setText("Livre");
         }
