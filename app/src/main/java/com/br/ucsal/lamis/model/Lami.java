@@ -8,6 +8,9 @@ public class Lami {
 
     private int[][] horarios;
 
+    public Lami() {
+    }
+
     public Lami(int idLami, int situacaoAtual) {
         super();
         this.idLami = idLami;

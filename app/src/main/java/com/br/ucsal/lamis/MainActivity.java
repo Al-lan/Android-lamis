@@ -27,33 +27,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //<isso vai ser uma consulta
-        Lami lami  = new Lami(1,1);
-        Lami lami1 = new Lami(2,0);
-
-        lamis.add(lami);
-        lamis.add(lami1); 
+        //<isso vai ser uma consulta>
+        JsonUtil.initLamis();
 
         dia = 0;
-        aula = 0;
         periodo = 0;
-        //isso vai ser uma consulta>
+        //</isso vai ser uma consulta>
+
+
+        lamis.addAll(JsonUtil.getTodos(dia, periodo));
+
 
         listLami = (ListView) findViewById(R.id.list_lami);
         //ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, lamis);
         ArrayAdapter adapter = new LamiAdapter(this, R.layout.lami, lamis);
         listLami.setAdapter(adapter);
 
-
-        listLami.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener(){
+        listLami.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent it = new Intent(MainActivity.this, HorarioCompleto.class);
                 it.putExtra("id", lamis.get(position).getIdLami());
                 startActivity(it);
-
-                return false ;
-            }
+}
         });
 
 

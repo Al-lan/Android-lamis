@@ -2,10 +2,13 @@ package com.br.ucsal.lamis;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import com.br.ucsal.lamis.model.Lami;
+
+import org.w3c.dom.Text;
 
 public class HorarioCompleto extends AppCompatActivity {
 
@@ -21,7 +24,7 @@ public class HorarioCompleto extends AppCompatActivity {
         int id = getIntent().getIntExtra("id", 0);
 
         //<isso vai ser uma consulta
-        lami = new Lami(id, 0, new  int [][] {{1,1,0,0,0,0,1,1},{1,0,1,0,1,1,1,1},{1,0,1,0,1,1,1,1}});
+        lami = JsonUtil.getLami(id);
         //isso vai ser uma consulta>
         
         TextView titulo = (TextView) findViewById(R.id.titulo);
@@ -41,12 +44,18 @@ public class HorarioCompleto extends AppCompatActivity {
         for (int i = 0; i < 8; i++){
 
             int idView = getResources().getIdentifier("H"+(i+1), "id", getPackageName());
-            View view = findViewById(idView);
+            TextView horarios = (TextView) findViewById(idView);
 
             if(dia[pointer][i] == 0){
-                view.setBackgroundColor(this.getResources().getColor(R.color.verde));
+                horarios.setBackgroundColor(this.getResources().getColor(R.color.verde));
+//              String a = horarios.getText().toString();
+//              String g = String.format(a, "Livre");
+//              horarios.setText(g);
             }else{
-                view.setBackgroundColor(this.getResources().getColor(R.color.vermelho));
+                horarios.setBackgroundColor(this.getResources().getColor(R.color.vermelho));
+//              String a = horarios.getText().toString();
+//              String g = String.format(a, "ocupado");
+//              horarios.setText(g);
             }
         }
     }

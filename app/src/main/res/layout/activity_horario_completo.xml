@@ -32,6 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Anterior"
+            android:gravity="left"
             android:onClick="anterior"/>
 
 
@@ -39,6 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Proximo"
+            android:gravity="right"
             android:onClick="proximo"/>
 
     </LinearLayout>
@@ -52,6 +54,10 @@
         android:textColor="@color/branco"
         android:gravity="center_horizontal"/>
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0.5pt" />
+
     <TextView
         android:padding="10pt"
         android:id="@+id/H2"
@@ -61,6 +67,10 @@
         android:textColor="@color/branco"
         android:gravity="center_horizontal"/>
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0.5pt" />
+
     <TextView
         android:padding="10pt"
         android:id="@+id/H3"
@@ -69,6 +79,10 @@
         android:text="9:40 - 10:40"
         android:textColor="@color/branco"
         android:gravity="center_horizontal"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0.5pt" />
 
     <TextView
         android:padding="10pt"
@@ -81,7 +95,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="5pt" />
+        android:layout_height="3pt" />
 
     <TextView
         android:padding="10pt"
@@ -92,6 +106,10 @@
         android:textColor="@color/branco"
         android:gravity="center_horizontal"/>
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0.5pt" />
+
     <TextView
         android:padding="10pt"
         android:id="@+id/H6"
@@ -101,6 +119,10 @@
         android:textColor="@color/branco"
         android:gravity="center_horizontal"/>
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0.5pt" />
+
     <TextView
         android:padding="10pt"
         android:id="@+id/H7"
@@ -109,6 +131,10 @@
         android:text="-"
         android:textColor="@color/branco"
         android:gravity="center_horizontal"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0.5pt" />
 
     <TextView
         android:padding="10pt"
